@@ -1,0 +1,4 @@
+## Append samples of your project ##
+resources:
+- deriv-app_v1alpha1_logmessage.yaml
+#+kubebuilder:scaffold:manifestskustomizesamples

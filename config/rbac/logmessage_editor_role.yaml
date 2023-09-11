@@ -1,0 +1,31 @@
+# permissions for end users to edit logmessages.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  labels:
+    app.kubernetes.io/name: clusterrole
+    app.kubernetes.io/instance: logmessage-editor-role
+    app.kubernetes.io/component: rbac
+    app.kubernetes.io/created-by: log-operator
+    app.kubernetes.io/part-of: log-operator
+    app.kubernetes.io/managed-by: kustomize
+  name: logmessage-editor-role
+rules:
+- apiGroups:
+  - deriv-app.deriv.test
+  resources:
+  - logmessages
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - deriv-app.deriv.test
+  resources:
+  - logmessages/status
+  verbs:
+  - get
