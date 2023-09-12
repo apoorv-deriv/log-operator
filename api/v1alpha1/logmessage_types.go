@@ -28,8 +28,8 @@ type LogMessageSpec struct {
 	// INSERT ADDITIONAL SPEC FIELDS - desired state of cluster
 	// Important: Run "make" to regenerate code after modifying this file
 
-	// Foo is an example field of LogMessage. Edit logmessage_types.go to remove/update
-	Foo string `json:"foo,omitempty"`
+	// Message to log
+	Message string `json:"message"`
 }
 
 // LogMessageStatus defines the observed state of LogMessage

@@ -9,4 +9,4 @@ metadata:
     app.kubernetes.io/created-by: log-operator
   name: logmessage-sample
 spec:
-  # TODO(user): Add fields here
+  message: "Hello, this is my first operator"
